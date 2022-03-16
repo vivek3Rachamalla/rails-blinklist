@@ -1,0 +1,10 @@
+
+<% if user_signed_in? %>
+<h1>you are logged_in</h1>
+<% else %>
+<h1>you are logged_out</h1>
+<% end %>
+
+<% if user_signed_in? %>
+<td><%= link_to 'books', books_path %></td>
+<% end %>

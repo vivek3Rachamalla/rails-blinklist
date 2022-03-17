@@ -38,7 +38,7 @@ include Devise::Test::IntegrationHelpers
   end
 
   test "should put book update" do
-    put book_url(@book), params: { book: { title:"testing",description:"testing test file"} }
+    put book_url(@book), params: { book: { title:"testing",author:"testing test file"} }
     assert_redirected_to book_url, params: { book: { id:1 } }
   end
 

@@ -9,7 +9,7 @@ class UserTest < ActionDispatch::IntegrationTest
     post user_session_url
   end
 
-  test "creating a book as admin" do
+  test "creating a book as user" do
     get books_url
     assert_response :success
     assert_difference 'Book.count', 0 do

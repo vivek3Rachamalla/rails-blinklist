@@ -1,4 +1,10 @@
 class UserBooksController < ApplicationController
+
+    def index
+        @user_books = UserBook.all
+        authorize @user_books
+    end    
+
     def create
         @user_book = UserBook.new(user_id:params[:user_id],book_id:params[:book_id],completed:params[:completed])
         authorize @user_book

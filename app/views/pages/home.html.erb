@@ -7,4 +7,7 @@
 
 <% if user_signed_in? %>
 <td><%= link_to 'books', books_path %></td>
+<% if current_user.admin %>
+    <%= link_to 'userBooks', user_books_path %>
+<% end %>
 <% end %>
